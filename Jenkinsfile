@@ -21,7 +21,7 @@ pipeline {
                     bat 'aws s3 rm s3://bhabani-1997-bhera --recursive'
                     echo "Attempting to upload site .."
                     echo "Command:  aws s3  sync "
-                    bat 'aws s3 sync ./my-app/ s3://bhabani-1997-bhera'
+                    bat 'aws s3 sync . s3://bhabani-1997-bhera'
                     echo "S3 Upload complete"
                     bat 'aws s3 ls s3://bhabani-1997-bhera'
                     echo "Invalidating cloudfrond distribution to get fresh cache"
